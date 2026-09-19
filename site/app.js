@@ -768,7 +768,8 @@
   }
   function stop() { btn.setAttribute('aria-pressed', 'false'); fadeTo(0, 700); }
 
-  audio.addEventListener('canplay', () => { btn.hidden = false; }, { once: true });
+  // o botão aparece na hora; só some se o arquivo da música não existir
+  btn.hidden = false;
   audio.addEventListener('error', () => { btn.hidden = true; });
 
   // navegadores bloqueiam autoplay com som: tenta já, senão começa no primeiro gesto

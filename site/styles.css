@@ -52,7 +52,7 @@ button{font:inherit;color:inherit}
 .lang-btn{background:none;border:0;padding:0 5px;min-height:44px;min-width:28px;cursor:pointer;font:inherit;color:var(--fg-3);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:transparent;transition:color .3s,text-decoration-color .3s}
 .lang-btn:hover{color:var(--fg-2)}
 .lang-btn[aria-pressed="true"]{color:var(--fg);text-decoration-color:currentColor}
-.sound{display:grid;place-items:center;width:44px;height:44px;margin-right:-12px;background:none;border:0;cursor:pointer;opacity:.6;transition:opacity .3s}
+.sound{display:grid;place-items:center;width:44px;height:44px;margin-right:-12px;background:none;border:0;cursor:pointer;opacity:.8;transition:opacity .3s}
 .sound:hover,.sound[aria-pressed="true"]{opacity:1}
 .sound[hidden]{display:none}
 .bars{display:flex;align-items:flex-end;gap:2px;height:12px}
