@@ -1,0 +1,9 @@
+# arquivos locais que não vão pro site
+vnse-site.zip
+Images/
+.claude/
+node_modules/
+Thumbs.db
+desktop.ini
+*.psd
+BK' - Caminhos.mp3

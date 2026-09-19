@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V__NSE — Portfólio</title>
+<meta name="description" content="Winycius Vinse — Branding, Design, UI/UX, Vídeos e Motion. Curitiba, PR.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23e9e1cf'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' text-anchor='middle' fill='%23111'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-bg.jpg">
+<link rel="preload" as="image" href="assets/paper.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#/" data-link aria-label="V__NSE — início">V<span>__</span>NSE</a>
+  <nav class="nav-links" aria-label="Menu">
+    <a href="#/videos-motion" data-link data-route="videos-motion" data-i18n="nav.videos-motion">Vídeos &amp; Motion</a>
+    <a href="#/projetos" data-link data-route="projetos" data-i18n="nav.projetos">Projetos</a>
+    <a href="#/sites-lps" data-link data-route="sites-lps" data-i18n="nav.sites-lps">Sites &amp; LP’S</a>
+  </nav>
+  <div class="lang" role="group" data-i18n-aria="lang" aria-label="Idioma">
+    <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">BR</button>
+    <span aria-hidden="true">/</span>
+    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">US</button>
+  </div>
+  <button class="sound" id="sound" type="button" data-i18n-aria="sound" aria-label="Som: BK — Caminhos" aria-pressed="false" hidden>
+    <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" data-i18n-aria="menu" aria-label="Menu">
+    <span aria-hidden="true"><i></i><i></i></span>
+  </button>
+</header>
+
+<!-- painel do menu no celular -->
+<div class="mnav" id="mnav" aria-hidden="true">
+  <nav class="mnav-list" aria-label="Menu">
+    <a href="#/videos-motion" data-link data-route="videos-motion" style="--i:0"><span class="mnav-num">01</span><span class="mnav-title" data-i18n="nav.videos-motion">Vídeos &amp; Motion</span></a>
+    <a href="#/projetos" data-link data-route="projetos" style="--i:1"><span class="mnav-num">02</span><span class="mnav-title" data-i18n="nav.projetos">Projetos</span></a>
+    <a href="#/sites-lps" data-link data-route="sites-lps" style="--i:2"><span class="mnav-num">03</span><span class="mnav-title" data-i18n="nav.sites-lps">Sites &amp; LP’S</span></a>
+  </nav>
+  <div class="mnav-foot"><span>V<span>__</span>NSE</span><span>Curitiba, PR</span></div>
+</div>
+
+<main id="app" class="view" aria-live="polite"></main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="logo small" href="#/" data-link>V<span>__</span>NSE</a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#/videos-motion" data-link data-i18n="nav.videos-motion">Vídeos &amp; Motion</a>
+      <a href="#/projetos" data-link data-i18n="nav.projetos">Projetos</a>
+      <a href="#/sites-lps" data-link data-i18n="nav.sites-lps">Sites &amp; LP’S</a>
+    </nav>
+    <div class="socials">
+      <a href="https://www.instagram.com/winicivs/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.linkedin.com/in/winicivs/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5v6M7.5 7.4v.1M11 16.5v-6M11 13.2c0-1.6 1-2.7 2.5-2.7s2.5 1 2.5 2.7v3.3"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<audio id="bgm" src="audio/caminhos.mp3" loop preload="auto"></audio>
+
+<!-- ===================== TEMPLATES ===================== -->
+
+<template id="tpl-home">
+  <section class="hero" aria-label="V__NSE">
+    <div class="stage">
+      <img class="hero-bg" src="assets/hero-bg.jpg" alt="" aria-hidden="true">
+      <div class="paper-pin">
+        <div class="paper" role="img" aria-label="Recibo: Winycius Vinse, designer. Desde 29/04/2004. Designer; acho muito foda fazer motion; faço tudo ouvindo música; comecei editar vídeos com 11 anos.">
+          <img class="paper-tex" src="assets/paper.png" alt="">
+          <img class="paper-hand" src="assets/paper-hand.png" alt="">
+          <div class="rc" aria-hidden="true">
+            <div class="rc-info">
+              <div><span data-type="0.55">SINCE: 29/04/2004</span></div>
+              <div><span data-type="0.85">NAME: WINYCIUS_VINSE</span></div>
+              <div><span data-type="1.15">ID: WHO?</span></div>
+              <div><span data-type="1.3">SOFT NEST ID NUMBER 25252525</span></div>
+              <div><span data-type="1.7">CWB, PR +5541</span></div>
+            </div>
+
+            <div class="rc-table">
+              <div class="rc-row rc-head"><span data-type="1.1">QTY</span><span data-type="1.15">ARTICLE</span><span data-type="1.2">PRICE</span></div>
+              <div class="rc-row"><span data-count="1" data-at="1.45"></span><span data-type="1.45" data-i18n="rc.a1">DESIGNER</span><span data-count="100" data-prefix="$" data-at="1.45"></span></div>
+              <div class="rc-row"><span data-count="1" data-at="1.65"></span><span data-type="1.65" data-i18n="rc.a2">ACHO MUITO FODA FAZER MOTION</span><span data-count="100" data-prefix="$" data-at="1.65"></span></div>
+              <div class="rc-row"><span data-count="1" data-at="1.85"></span><span data-type="1.85" data-i18n="rc.a3">FAÇO TUDO OUVINDO MÚSICA</span><span data-count="100" data-prefix="$" data-at="1.85"></span></div>
+              <div class="rc-row"><span data-count="1" data-at="2.05"></span><span data-type="2.05" data-i18n="rc.a4">COMECEI EDITAR VÍDEOS COM 11 ANOS</span><span data-count="100" data-prefix="$" data-at="2.05"></span></div>
+            </div>
+
+            <div class="rc-totals">
+              <div><u data-type="2.4">SUBTOTAL</u><span data-count="400" data-prefix="$" data-at="2.4" data-dur="1.8"></span></div>
+              <div><u data-type="2.6">TAX</u><span data-type="2.7">------</span></div>
+              <div><u data-type="2.8">TOTAL</u><span data-count="400" data-prefix="$" data-at="2.8" data-dur="1.8"></span></div>
+            </div>
+
+            <div class="rc-bank">
+              <div><span data-type="3.0">TRANSFER PAYONEER BANK</span></div>
+              <div><span data-type="3.3">ALIAS SOFT NEST</span></div>
+              <div><span data-type="3.5">ACCOUNT ID 25252525</span></div>
+            </div>
+
+            <div class="rc-foot-l"><span data-type="3.3">DESIGNER</span></div>
+            <div class="rc-foot-c"><span data-type="3.5">V__NSE</span></div>
+            <div class="rc-foot-r"><span data-count="21" data-at="3.4"></span></div>
+            <div class="rc-phone"><span data-type="3.8">+41 999434088 (WPP CHAT ONLY)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="hero-side hero-left"><span data-type="0.35" data-i18n="hero.left">Vídeos / Motion /
+Branding /
+Design / UI/UX /</span></p>
+    <p class="hero-side hero-right"><span data-type="0.9" data-i18n="hero.right">Born in Brasil /
+Curitiba, PR</span></p>
+  </section>
+
+  <section class="wrap section about" id="about">
+    <div class="label-row reveal"><span>/ ABOUT</span><span>N./01</span></div>
+    <div class="about-grid">
+      <figure class="about-photo reveal">
+        <img src="assets/miniwin.jpg" data-i18n-alt="about.photo" alt="Winycius criança, fantasiado de Homem-Aranha, pendurado numa barra azul" loading="lazy">
+      </figure>
+      <div class="about-text reveal" style="--d:.08s">
+        <h1 class="display">Introduction</h1>
+        <p data-i18n="about.p1"></p>
+        <p data-i18n="about.p2"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="portfolio">
+    <div class="label-row reveal"><span data-i18n="home.portfolio">/ PORTFÓLIO</span><a class="ulink" href="#/projetos" data-explore aria-haspopup="dialog">EXPLORE ALL</a><span>N./02</span></div>
+    <div class="grid" data-grid="all"></div>
+  </section>
+</template>
+
+<template id="tpl-list">
+  <section class="wrap section page-head">
+    <div class="label-row reveal"><span data-slot="label"></span><span data-slot="num"></span></div>
+    <h1 class="display page-title reveal" data-slot="title"></h1>
+    <p class="page-count reveal" data-slot="count"></p>
+  </section>
+  <section class="wrap section tight">
+    <div class="grid" data-grid></div>
+  </section>
+</template>
+
+<template id="tpl-videos">
+  <section class="wrap section page-head">
+    <div class="label-row reveal"><span data-slot="label"></span><span data-slot="num"></span></div>
+    <h1 class="display page-title reveal" data-i18n="nav.videos-motion">Vídeos &amp; Motion</h1>
+  </section>
+  <section class="wrap">
+    <div class="chips reveal" data-slot="chips" role="group" data-i18n-aria="filter" aria-label="Filtrar"></div>
+    <div class="vgroups" data-slot="groups"></div>
+  </section>
+</template>
+
+<template id="tpl-project">
+  <article class="project">
+    <section class="wrap section page-head">
+      <div class="label-row reveal"><a class="back" href="#/projetos" data-link data-slot="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Projetos</span></a><span data-slot="num"></span></div>
+      <h1 class="display project-title reveal" data-slot="title"></h1>
+      <dl class="meta reveal">
+        <div><dt data-i18n="meta.cat">Categoria</dt><dd data-slot="cat"></dd></div>
+        <div><dt data-i18n="meta.year">Ano</dt><dd data-slot="year"></dd></div>
+        <div><dt data-i18n="meta.client">Cliente</dt><dd data-slot="client"></dd></div>
+        <div data-slot="behance-wrap"><dt data-i18n="meta.published">Publicado no</dt><dd><a class="ulink" data-slot="behance" target="_blank" rel="noopener">Behance ↗</a></dd></div>
+      </dl>
+    </section>
+    <section class="case" data-slot="case"></section>
+    <section class="wrap" data-slot="placeholder">
+      <div class="cover cover-xl reveal" data-slot="cover"></div>
+      <div class="project-body">
+        <div class="label-row reveal"><span>/ SOBRE O PROJETO</span><span></span></div>
+        <p class="reveal" data-slot="desc"></p>
+      </div>
+      <div class="project-gallery">
+        <div class="cover reveal" data-slot="g1"></div>
+        <div class="cover reveal" data-slot="g2"></div>
+      </div>
+    </section>
+    <section class="wrap section next">
+      <div class="label-row reveal"><span data-i18n="next">/ PRÓXIMO</span><span data-slot="nextnum"></span></div>
+      <a class="next-link reveal" data-link data-slot="next"></a>
+    </section>
+  </article>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="autoscroll.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
