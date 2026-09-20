@@ -1,6 +1,6 @@
 # V__NSE — Portfólio
 
-Site pessoal do Winycius (V__NSE): vídeos, motion, branding, design e UI/UX.
+Site pessoal do Winycius (V__NSE): vídeos, motion, branding, design e UX/UI.
 
 Site estático, sem build. Tudo que vai pro ar está na pasta `site/`.
 
