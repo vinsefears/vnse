@@ -744,29 +744,50 @@
     lastY = y;
   }, { passive: true });
 
-  /* ---------------- MUSIC (BK — Caminhos, ~ -40 dB) ---------------- */
+  /* ---------------- MUSIC (BK — Caminhos, ~ -40 dB) ----------------
+     O celular (iOS principalmente) ignora audio.volume e toca no volume cheio,
+     entao o volume passa por um ganho da Web Audio, que funciona em todo lugar. */
   const audio = $('#bgm');
   const btn = $('#sound');
-  const TARGET = Math.pow(10, -40 / 20); // −40 dB = 0.01 — bem ambiente
-  let wanted = true;       // o visitante não desligou
-  let fadeRaf = 0;
+  const TARGET = Math.pow(10, -40 / 20); // -40 dB = 0.01 — bem ambiente
+  let wanted = true;       // o visitante nao desligou
+  let fadeRaf = 0, ctx = null, gain = null;
+
+  function initGain() {
+    if (gain || !(window.AudioContext || window.webkitAudioContext)) return;
+    try {
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      gain = ctx.createGain();
+      gain.gain.value = 0;
+      ctx.createMediaElementSource(audio).connect(gain).connect(ctx.destination);
+    } catch (e) { ctx = null; gain = null; }
+  }
+  const level = () => (gain ? gain.gain.value : audio.volume);
+  function setLevel(v) {
+    const x = Math.min(1, Math.max(0, v));
+    if (gain) gain.gain.value = x; else audio.volume = x;
+  }
 
   function fadeTo(v, ms = 1800) {
     cancelAnimationFrame(fadeRaf);
-    const from = audio.volume, t0 = performance.now();
+    const from = level(), t0 = performance.now();
     const f = now => {
       const t = Math.min(1, (now - t0) / ms);
-      audio.volume = Math.min(1, Math.max(0, from + (v - from) * t));
+      setLevel(from + (v - from) * t);
       if (t < 1) fadeRaf = requestAnimationFrame(f);
       else if (v === 0) audio.pause();
     };
     fadeRaf = requestAnimationFrame(f);
   }
   function play() {
-    audio.volume = 0;
+    initGain();
+    if (ctx && ctx.state === 'suspended') ctx.resume();
+    setLevel(0);
     return audio.play().then(() => { btn.setAttribute('aria-pressed', 'true'); if (ducked) audio.pause(); else fadeTo(TARGET); });
   }
   function stop() { btn.setAttribute('aria-pressed', 'false'); fadeTo(0, 700); }
+  // pra conferir/ajustar o volume pelo console: __bgm.level() e __bgm.set(0.02)
+  window.__bgm = { level, set: setLevel, target: TARGET };
 
   // o botão aparece na hora; só some se o arquivo da música não existir
   btn.hidden = false;
