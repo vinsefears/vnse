@@ -333,7 +333,10 @@
 
   function viewHome() {
     const f = $('#tpl-home').content.cloneNode(true);
-    fillGrid($('[data-grid]', f), PROJECTS);
+    // ordem da home (2 por linha); o que não está aqui vem depois, na ordem de PROJECTS
+    const HOME_ORDER = ['elorah', 'calceleve', 'skytech', 'helo-ribeiro'];
+    const first = HOME_ORDER.map(s => PROJECTS.find(p => p.slug === s));
+    fillGrid($('[data-grid]', f), [...first, ...PROJECTS.filter(p => !first.includes(p))]);
     return f;
   }
 
