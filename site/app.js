@@ -116,6 +116,16 @@
   }
 
   const PROJECTS = [
+    { slug: 'elorah', name: 'ELORAH', cat: 'ID Visual', year: 2026, art: 'art-sky', group: 'projetos',
+      fields: 'Branding, Direção de arte, Design gráfico', behance: 'https://www.behance.net/gallery/257899119/ELORAH-Brand-Identity',
+      cover: A('elorah', 'cover.webp'),
+      modules: [['img', '01.webp', 1400, 788], ['img', '02.webp', 1400, 1050], ['row', ['03.webp', '04.webp'], 960, 1440],
+        ['img', '05.webp', 1400, 1050], ['img', '06.webp', 1400, 788], ['img', '07.webp', 1400, 1050], ['img', '08.webp', 1400, 875],
+        ['img', '09.webp', 1400, 1050], ['img', '10.webp', 1400, 788], ['row', ['11.webp', '12.webp'], 1200, 1500],
+        ['img', '13.webp', 1400, 788], ['img', '14.webp', 1400, 1050], ['img', '15.webp', 1400, 904],
+        ['row', ['16.webp', '17.webp'], 1200, 1500], ['row', ['18.webp', '19.webp'], 960, 1440],
+        ['img', '20.webp', 1400, 788], ['img', '21.webp', 1400, 1050], ['img', '22.webp', 1400, 1050],
+        ['img', '23.webp', 1400, 788], ['img', '24.webp', 1400, 788]] },
     { slug: 'skytech', name: 'Skytech', cat: 'ID Visual', year: 2025, art: 'art-sky', group: 'projetos',
       fields: 'Branding, Design gráfico, Publicidade', behance: 'https://www.behance.net/gallery/219931233/Skytech',
       cover: A('skytech', 'cover.webp'),
