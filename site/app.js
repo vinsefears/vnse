@@ -205,6 +205,83 @@
   Object.assign(PROJECTS.find(p => p.slug === 'ultracoffee'), { cover: vid('CPMYaT6-Gks').thumb, fields: 'Motion — Halloween', modules: [['videos', ['CPMYaT6-Gks']]] });
   Object.assign(PROJECTS.find(p => p.slug === 'kids'), { cover: vid('pZX1T2LLeeA').thumb, fields: 'Vídeos institucionais — Kids Centro Educacional', modules: [['videos', ['bI-5d0c8sO4', 'PgWyFwEiNRM', 'pZX1T2LLeeA']]] });
 
+  /* Textos dos cases (os mesmos do Behance), em PT e EN.
+     [depois do módulo nº, texto] — o número conta os módulos do case a partir de 0.
+     note: true = observação pequena no fim. */
+  const ABOUT = { pt: '/ Sobre o projeto', en: '/ About the project' };
+  const CASE_TEXTS = {
+    elorah: [
+      [0, { h: ABOUT,
+        pt: ['A ELORAH é uma pequena loja que faz canecas personalizadas, presentes e pijamas infantis. Tudo é feito uma peça por vez, com o nome de alguém e outra pessoa esperando pra receber.',
+          'O desafio era dar à loja um rosto tão acolhedor quanto os produtos, sem parecer genérico. A resposta veio de dois olhares, um azul e um verde. Deles vieram o nome, as cores, o lettering e um par de olhinhos que virou o personagem da marca. Eles reagem, piscam, se encantam e vivem em tudo o que a loja entrega.'],
+        en: ['ELORAH is a small shop that makes personalized mugs, gifts and pajamas for kids. Everything is made one piece at a time, with someone’s name on it and someone else waiting to receive it.',
+          'The challenge was to give the shop a face that felt as warm as the products, without looking generic. The answer came from two looks, one blue and one green. From them came the name, the colors, the lettering and a pair of little eyes that became the brand’s character. They react, they wink, they fall in love, and they live on everything the shop sends out.'] }],
+      [3, { h: { pt: '/ Dois olhares', en: '/ Two looks' },
+        pt: ['Toda marca começa com um olhar. Esta começou com dois.',
+          'O olhar azul deu forma ao “Elo”, escrito à mão. O olhar verde deu postura ao “Rah”, desenhado letra por letra, firme e de pé. E por cima de tudo, um respingo de tinta: quatro gotas, como cores numa paleta de pintor de madeira. É o lado criativo da loja, o momento em que uma caneca, uma camiseta ou uma caixa em branco ganha cor e vira de alguém.',
+          'Os olhinhos são o personagem da marca. Curioso, de canto, encantado, feliz, piscando, apaixonado, sonhando. Um vocabulário inteiro de sentimentos, desenhado com o mesmo traço da logo.'],
+        en: ['Every brand starts with a look. This one started with two.',
+          'The blue look shaped “Elo”, handwritten. The green look gave “Rah” its posture, drawn letter by letter, steady and upright. And above it all, a splash of paint: four drops, like colors on a wooden painter’s palette. It’s the creative side of the shop, the moment a blank mug, shirt or box gets color and becomes someone’s.',
+          'The little eyes are the brand’s character. Curious, sideways, enchanted, happy, winking, in love, dreaming. A whole vocabulary of feelings, drawn with the same monoline as the logo.'] }],
+      [9, { h: { pt: '/ Um sistema feito pra ser personalizado', en: '/ A system built to be personalized' },
+        pt: ['Os olhares viraram cor. Olhar Azul e Olhar Verde lideram a paleta. Afeto, Sol e Pincel vêm do respingo de tinta. Creme e Tinta dão respiro e leitura.',
+          'A Fredoka leva os títulos com as mesmas formas redondas e macias do lettering. A DM Sans cuida de tudo que precisa ser lido.',
+          'A logo funciona colorida, em negativo sobre as cores principais e em uma cor só, para estampas e carimbos. O respingo de tinta funciona sozinho como símbolo e, junto com os olhinhos, forma o padrão de papel de seda, adesivos e fundos.'],
+        en: ['The looks became color. Olhar Azul and Olhar Verde lead the palette. Afeto, Sol and Pincel come from the paint splash. Creme and Tinta give the system room to breathe and to be read.',
+          'Fredoka carries the headlines with the same round, soft shapes as the lettering. DM Sans handles everything that needs to be read.',
+          'The logo works in full color, in negative over the main colors and in a single color for prints and stamps. The paint splash stands alone as a symbol, and together with the eyes it forms a pattern for tissue paper, stickers and backgrounds.'] }],
+    ],
+    skytech: [
+      [0, { h: ABOUT,
+        pt: ['Skytech é uma empresa fictícia especializada em soluções de infraestrutura em nuvem, escalabilidade e performance para negócios em crescimento. O projeto foi desenvolvido com o objetivo de construir uma identidade visual sólida, moderna e alinhada ao universo tecnológico, traduzindo inovação, confiança e expansão.',
+          'O conceito da marca parte da união entre tecnologia, escala e conectividade. O nome Skytech remete à ideia de nuvem, elevação e futuro, reforçando o posicionamento da empresa como uma solução de cloud infrastructure preparada para crescimento.'],
+        en: ['Skytech is a fictional company specializing in cloud infrastructure, scalability and performance for growing businesses. The goal was to build a solid, modern visual identity rooted in the world of technology, one that conveys innovation, trust and expansion.',
+          'The brand concept brings together technology, scale and connectivity. The name Skytech evokes the cloud, elevation and the future, reinforcing the company’s position as cloud infrastructure built for growth.'] }],
+      [5, { h: { pt: '/ Paleta e tipografia', en: '/ Color and type' },
+        pt: ['A paleta foi desenvolvida para transmitir segurança, modernidade e alta performance.',
+          'A tipografia escolhida reforça o aspecto contemporâneo e tecnológico da marca, mantendo alta legibilidade em aplicações digitais e impressas.'],
+        en: ['The palette was built to convey security, modernity and high performance.',
+          'The typeface reinforces the brand’s contemporary, tech-driven feel while staying highly legible in both digital and print.'] }],
+      [8, { note: true,
+        pt: ['*Projeto fictício desenvolvido unicamente para fins de estudo e demonstração.'],
+        en: ['*Fictional project, created for study and demonstration purposes only.'] }],
+    ],
+    kaizen: [
+      [0, { h: { pt: '/ Sobre o cliente', en: '/ About the client' },
+        pt: ['O Instituto Princípio Kaizen, sediado em Curitiba/PR, é uma organização de educação e desenvolvimento humano especializada em treinamentos voltados ao crescimento pessoal e profissional.',
+          'Eles combinam ferramentas como Programação Neurolinguística (PNL) e inteligência emocional para promover transformações comportamentais e ajudar pessoas e equipes a potencializar suas capacidades.'],
+        en: ['Instituto Princípio Kaizen, based in Curitiba, Brazil, is an education and human development organization specializing in training for personal and professional growth.',
+          'They combine tools such as Neuro-Linguistic Programming (NLP) and emotional intelligence to drive behavioral change and help people and teams reach their full potential.'] }],
+    ],
+    calceleve: [
+      [0, { h: ABOUT,
+        pt: ['Durante minha atuação na MoOn.ag, fui responsável pelo desenvolvimento de materiais gráficos para a Calceleve, uma rede de calçados com foco em campanhas promocionais e comunicação no ponto de venda.',
+          'Este projeto reúne uma seleção dos principais materiais produzidos para a marca, incluindo peças para redes sociais, campanhas sazonais, materiais impressos, embalagens e comunicação visual para lojas físicas.'],
+        en: ['During my time at MoOn.ag, I was responsible for creating graphic materials for Calceleve, a Brazilian footwear retailer focused on promotional campaigns and in-store communication.',
+          'This project showcases a curated selection of work developed for the brand, including social media content, seasonal campaigns, print materials, packaging and visual communication for physical stores.'] }],
+      [3, { h: { pt: '/ Campanhas', en: '/ Campaigns' },
+        pt: ['As campanhas foram criadas para acompanhar diferentes momentos do calendário comercial da marca, explorando novas composições, cores e elementos gráficos sem abrir mão da identidade visual construída para a Calceleve.'],
+        en: ['The campaigns were created to support different moments throughout the brand’s commercial calendar, exploring a variety of visual concepts, color palettes and graphic elements while maintaining a consistent identity across every piece developed for Calceleve.'] }],
+      [7, { h: { pt: '/ Embalagens', en: '/ Packaging' },
+        pt: ['Além dos materiais promocionais, também fiz o desenvolvimento de embalagens para a marca. A proposta foi criar uma experiência que fosse além do produto, utilizando elementos gráficos e uma linguagem visual alinhada à identidade da Calceleve.',
+          'O resultado é uma embalagem que reforça o reconhecimento da marca e transforma um momento simples, como abrir uma caixa, em mais um ponto de contato com o cliente.'],
+        en: ['Alongside promotional materials, I also designed packaging for the brand. The objective was to extend Calceleve’s visual identity beyond its campaigns, creating packaging that reinforces brand recognition while delivering a consistent and memorable customer experience.'] }],
+      [9, { h: { pt: '/ Redes sociais', en: '/ Social media' },
+        pt: ['Os conteúdos para redes sociais foram construídos a partir de ensaios fotográficos da marca, com foco na edição e tratamento das imagens. A proposta foi desenvolver uma estética consistente, capaz de valorizar os produtos e transmitir a identidade da Calceleve de forma natural e reconhecível em cada publicação.'],
+        en: ['The brand’s social media content was built around photographic campaigns, with a focus on photo editing and retouching. The goal was to create a consistent visual aesthetic that enhanced the products while conveying Calceleve’s identity in a natural and recognizable way across every publication.'] }],
+    ],
+    'helo-ribeiro': [
+      [11, { note: true,
+        pt: ['*Trabalho desenvolvido em parceria com a agência Conceito Prime.'],
+        en: ['*Created in partnership with the Conceito Prime agency.'] }],
+    ],
+  };
+  // encaixa os textos de trás pra frente, pra numeração dos módulos não mudar no meio
+  Object.entries(CASE_TEXTS).forEach(([slug, list]) => {
+    const p = PROJECTS.find(x => x.slug === slug);
+    [...list].sort((a, b) => b[0] - a[0]).forEach(([after, x]) => p.modules.splice(after + 1, 0, ['text', x]));
+  });
+
   const ALL = [...PROJECTS, ...SITES];
 
   // ordem = ordem do menu (vídeos em primeiro); título e label seguem o idioma
@@ -378,6 +455,14 @@
 
   function caseModule(slug, m) {
     const [type] = m;
+    if (type === 'text') {
+      // texto do case (vem do Behance): título opcional + parágrafos, no idioma da página
+      const x = m[1], el = document.createElement('div');
+      el.className = `mod-text reveal${x.note ? ' is-note' : ''}`;
+      const h = x.h ? `<div class="label-row"><span>${x.h[LANG] || x.h.pt}</span></div>` : '';
+      el.innerHTML = `<div class="mod-text-in">${h}<div class="mod-text-body">${(x[LANG] || x.pt).map(p => `<p>${noOrphan(p)}</p>`).join('')}</div></div>`;
+      return el;
+    }
     if (type === 'videos') {
       const g = document.createElement('div');
       g.className = 'mod-videos';

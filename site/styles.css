@@ -247,6 +247,16 @@ button{font:inherit;color:inherit}
 .cover.has-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
 .meta dd a{text-transform:none}
 .case{max-width:1400px;margin:clamp(8px,2vw,24px) auto 0;display:flex;flex-direction:column;gap:0;background:#0b0b0b}
+/* texto do case (vem do Behance): rótulo à esquerda, parágrafos à direita */
+.mod-text{padding:clamp(56px,8vw,112px) var(--gut)}
+.mod-text-in{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:20px clamp(24px,5vw,64px)}
+.mod-text .label-row{margin:0;align-self:start;padding-top:.4em}
+.mod-text-body{grid-column:2}
+.mod-text-body p{margin:0;max-width:56ch;color:var(--fg-2);font-size:clamp(15px,1.25vw,17px);line-height:1.6}
+.mod-text-body p+p{margin-top:1em}
+.mod-text.is-note{padding-top:clamp(28px,4vw,48px);padding-bottom:clamp(28px,4vw,48px)}
+.mod-text.is-note p{font-size:12.5px;color:var(--fg-3)}
+@media (max-width:760px){.mod-text-in{grid-template-columns:minmax(0,1fr)}.mod-text-body{grid-column:1}}
 .mod{position:relative;overflow:hidden}
 .mod.reveal{transform:none;transition:opacity 1.1s var(--ease)}
 .mod img{width:100%;height:auto;opacity:0;transition:opacity .9s var(--ease)}
